@@ -2,24 +2,44 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe Pro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Tic Tac Toe</h1>
-  <div id="board">
-    <div class="cell" data-index="0"></div>
-    <div class="cell" data-index="1"></div>
-    <div class="cell" data-index="2"></div>
-    <div class="cell" data-index="3"></div>
-    <div class="cell" data-index="4"></div>
-    <div class="cell" data-index="5"></div>
-    <div class="cell" data-index="6"></div>
-    <div class="cell" data-index="7"></div>
-    <div class="cell" data-index="8"></div>
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="mode-selector">
+      <button id="mode-pvp" class="mode-btn active">👥 2 Joueurs</button>
+      <button id="mode-cpu" class="mode-btn">🤖 vs Ordi</button>
+    </div>
+
+    <div id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <p id="status">Au tour de X</p>
+
+    <div class="scores">
+      <div class="score"><span class="x-color">X</span> : <span id="score-x">0</span></div>
+      <div class="score">Nuls : <span id="score-draw">0</span></div>
+      <div class="score"><span class="o-color">O</span> : <span id="score-o">0</span></div>
+    </div>
+
+    <div class="buttons">
+      <button id="restart">Recommencer</button>
+      <button id="reset-score">Reset Scores</button>
+    </div>
   </div>
-  <p id="status">Au tour de X</p>
-  <button id="restart">Recommencer</button>
   <script src="script.js"></script>
 </body>
 </html>
